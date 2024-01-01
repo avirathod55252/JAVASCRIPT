@@ -46,18 +46,22 @@ firstname.shift();
 console.log(firstname);
 
 // slice ()
-console.log(firstname.slice(1, 2));
+console.log(firstname.slice(0, 4));
 
-// splice( add, remove,replace)
+// splice( add (idx), remove,replace)
 
-let numericalarr = [2, 3, 3, 4, 4, 9, 5];
-
-// console.log(numericalarr);
+let numericalarr = [1, 2, 3, 4, 5];
+console.log(numericalarr);
 
 // add element
 console.log(numericalarr.splice(2, 0, 4));
-// Delete element
-numericalarr.splice(0, 1);
-// replace ele
-numericalarr.splice(0, 1, 9);
-console.log(numericalarr);
+// console.log(numericalarr.splice(1, 0, 9));
+console.log("add element =" + numericalarr);
+
+//  Delete element
+numericalarr.splice(0, 2);
+console.log("delete = " + numericalarr);
+//  replace ele
+numericalarr.splice(0, 2, 9);
+
+console.log("replace =" + numericalarr);

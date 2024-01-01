@@ -28,3 +28,6 @@ let student = {
 for (let i in student) {
   console.log(i + student[i]);
 }
+for (let i in marks) {
+  console.log(i);
+}
