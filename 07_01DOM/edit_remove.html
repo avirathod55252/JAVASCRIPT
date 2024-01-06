@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="language">Javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addlanguage(langname) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langname}`; // here innerHTml used so function traversal problem occure not a optimized way for big project .
+      document.querySelector(".language").appendChild(li);
+    }
+    addlanguage("python");
+    // optimized way to write another way:
+    // big project best way to write :
+
+    function optionalLanguage(langname) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langname));
+      document.querySelector(".language").appendChild(li);
+    }
+    optionalLanguage("c");
+    optionalLanguage("html");
+
+    // Edit
+    const seclang = document.querySelector("li:nth-child(2)");
+    // seclang.innerHTML = "css";
+    const newli = document.createElement("li");
+    newli.textContent = "css";
+    seclang.replaceWith(newli);
+
+    // remove :
+    const lastlang = document.querySelector("li:nth-child(3)");
+    // const lastlang = document.querySelector("li:last-child");
+    lastlang.remove();
+  </script>
+</html>
