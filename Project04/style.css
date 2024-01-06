@@ -1,0 +1,22 @@
+#container{
+  border: 1px solid black;
+  margin: 17rem;
+  padding: 2px;
+  text-align:  center;
+  background-color: cadetblue;
+}
+#heading{
+}
+#subt{
+  padding: 0.6rem;
+  background-color: rgb(109, 163, 109);
+}
+#guessfield{
+  border: 1px solid black;
+  padding: 0.3rem;
+  margin: 0.4rem;
+}
+#guess{
+  text-decoration: solid;
+  color: rgb(15, 46, 103);
+}
