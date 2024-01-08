@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <ul id="images">
+      <li>
+        <img
+          width="500px"
+          id="space"
+          src="./pexels-murat-esibatir-4355348.jpg"
+          alt="space"
+        />
+      </li>
+      <!--  onclick="alert('avi')" -->
+      <li>
+        <img
+          width="500px"
+          id="photoshop"
+          src="./pexels-murat-esibatir-4355348.jpg"
+          alt="space"
+        />
+      </li>
+      <li>
+        <img
+          width="500px"
+          id="photoshop"
+          src="./pexels-murat-esibatir-4355348.jpg"
+          alt="space"
+        />
+      </li>
+    </ul>
+  </body>
+  <script>
+    // document.getElementById("space").onclick = function () {
+    //   alert("space");
+    // };
+    // document.getElementById("images").addEventListener("click", function (e) {
+    //   // console.log(e);
+    //   alert("images is clicked");
+    // }),
+    //   false;
+    // document.getElementById("space").addEventListener("click", function (e) {
+    //   console.log(e);
+    //   alert("space is clicked");
+    // }),
+    //   false;
+    // document.getElementById("images").addEventListener("click", function (e) {
+    //   console.log(e.target.parentNode);
+    //   let removeit = e.target.parentNode;
+    //   removeit.remove();
+    // });
+    document.getElementById("images").addEventListener("click", function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        let removeit = e.target.parentNode;
+        removeit.remove();
+      }
+    });
+  </script>
+</html>
